@@ -73,7 +73,7 @@ In this project, we also hope to create a "full" production environment, which w
 
 I want your feedback! Here's a list of different ways to me and request help:
 
-- Report bugs and submit feature requests to [GitHub issues](https://github.com/Abd-Beltaji/ThetaExpress/issues).
+- Report bugs and submit feature requests to [GitHub issues](https://github.com/Abd-Beltaji/Theta-vite/issues).
 - For private communications, email me at _abd.elbeltaji@gmail.com_.
 - And do not forget to follow [_@Abd_Elbeltaji_](https://twitter.com/Abd_Elbeltaji) on Twitter!
 
