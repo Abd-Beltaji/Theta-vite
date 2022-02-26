@@ -1,0 +1,64 @@
+{
+	"name": "theta-vite",
+	"private": true,
+	"version": "0.0.0",
+	"description": "Theta Express with vite",
+	"license": "MIT",
+	"main": "./app/index.ts",
+	"scripts": {
+		"start": "yarn build && yarn electron:start",
+		"dev": "concurrently -k \"vite\" \"yarn electron:dev\"",
+		"build": "vite build",
+		"preview": "vite preview",
+		"electron:dev": "cross-env IS_DEV=true electron-forge start",
+		"electron:build": "electron-forge make",
+		"electron:package": "electron-forge package"
+	},
+	"dependencies": {
+		"electron-squirrel-startup": "^1.0.0",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2"
+	},
+	"devDependencies": {
+		"@electron-forge/cli": "^6.0.0-beta.63",
+		"@electron-forge/maker-deb": "^6.0.0-beta.63",
+		"@electron-forge/maker-rpm": "^6.0.0-beta.63",
+		"@electron-forge/maker-squirrel": "^6.0.0-beta.63",
+		"@electron-forge/maker-zip": "^6.0.0-beta.63",
+		"@types/react": "^17.0.33",
+		"@types/react-dom": "^17.0.10",
+		"@vitejs/plugin-react": "^1.0.7",
+		"concurrently": "^7.0.0",
+		"cross-env": "^7.0.3",
+		"electron": "17.1.0",
+		"typescript": "^4.5.4",
+		"vite": "^2.8.0"
+	},
+	"config": {
+		"forge": {
+			"packagerConfig": {},
+			"makers": [
+				{
+					"name": "@electron-forge/maker-squirrel",
+					"config": {
+						"name": "theta_vite"
+					}
+				},
+				{
+					"name": "@electron-forge/maker-zip",
+					"platforms": [
+						"darwin"
+					]
+				},
+				{
+					"name": "@electron-forge/maker-deb",
+					"config": {}
+				},
+				{
+					"name": "@electron-forge/maker-rpm",
+					"config": {}
+				}
+			]
+		}
+	}
+}
